@@ -34,6 +34,27 @@ function App() {
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
   }
 
+  //compare selected cards
+  useEffect(() => {
+    if(choiceOne && choiceTwo){
+      if(choiceOne.src === choiceTwo.src){
+        console.log("Match")
+        resetTurn();
+      } else {
+        console.log("No Match")
+        resetTurn()
+      }
+    }
+  }, [choiceOne, choiceTwo])
+
+  //reset choices & increase turn
+  const resetTurn = () => {
+    setChoiceOne(null)
+    setChoiceTwo(null)
+    setTurns(prevTurns => prevTurns + 1)
+  }
+
+
   return (
     <div className="App">
       <h1>MemeMatch</h1>
