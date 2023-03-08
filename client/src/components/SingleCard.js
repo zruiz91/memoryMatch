@@ -1,13 +1,13 @@
 import "./SingleCard.css";
 
-function SingleCard({ card, handleChoice }) {
+function SingleCard({ card, handleChoice, flipped }) {
 
         const handleClick = () => {
             handleChoice(card);
         }
     return (
         <div className="card" >
-            <div>
+            <div className={flipped ? "flipped" : ""}>
                 <img
                     className="front"
                     src={card.src}
@@ -18,7 +18,7 @@ function SingleCard({ card, handleChoice }) {
                     src="/img/cover.png"
                     alt="card back"
                     height="250"
-                    onClick={handleClick} />
+                    onClick={handleClick}/>
             </div>
         </div>
     );
