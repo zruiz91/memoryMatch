@@ -3,11 +3,22 @@ import './App.css';
 import SingleCard from "./components/SingleCard";
 
 const cardImages = [
-  { "src": "img/blackHole1.png", matched: false },
-  { "src": "img/blackHole2.png", matched: false },
-  { "src": "img/blackHole3.png", matched: false },
-  { "src": "img/bloodSplatter.png", matched: false },
-  { "src": "img/explodingStar.png", matched: false },
+  { "src": "img/bulldog.png", matched: false },
+
+  { "src": "img/corgi.png", matched: false },
+
+  { "src": "img/poodle.png", matched: false },
+
+  { "src": "img/french-bulldog.png", matched: false },
+
+  { "src": "img/shih-tzu.png", matched: false },
+
+  { "src": "img/dachsund.png", matched: false },
+
+  // { "src": "img/golden-retriever.png", matched: false },
+  { "src": "img/dalmation.png", matched: false },
+
+  { "src": "img/shiba-inu.png", matched: false },
 ]
 
 
@@ -77,7 +88,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>MemeMatch</h1>
+      <h1>MemoMatch</h1>
       <button onClick={shuffleCards}>New Game</button>
 
       <div className="card-grid">
